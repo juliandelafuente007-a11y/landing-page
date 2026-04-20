@@ -104,29 +104,22 @@
     }
     .btn-outline:hover { background: var(--blue-light); }
 
-    /* Hero stats */
-    .hero-right { display: flex; flex-direction: column; gap: 12px; }
+    /* Hero Image &amp; Stats Bar */
+    .hero-image-wrapper { width: 100%; border-radius: var(--radius); overflow: hidden; display: flex; }
+    .hero-image { width: 100%; height: auto; object-fit: cover; display: block; border: 1px solid var(--gray-100); border-radius: var(--radius); }
+    .stats-bar-wrap { background: var(--blue-light); border-bottom: 1px solid var(--gray-100); }
+    .stats-bar { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; padding: 3rem 2.5rem; }
     .stat-card {
       background: var(--white); border: 1px solid var(--gray-100);
-      border-radius: var(--radius); padding: 1.25rem 1.5rem;
+      border-radius: var(--radius); padding: 1.5rem 2rem;
     }
     .stat-card.featured { background: var(--blue); color: var(--white); border-color: var(--blue); }
-    .stat-label { font-size: 12px; font-weight: 400; color: var(--gray-500); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .stat-label { font-size: 12px; font-weight: 500; color: var(--gray-500); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
     .stat-card.featured .stat-label { color: rgba(255,255,255,0.7); }
     .stat-val { font-size: 44px; font-weight: 600; line-height: 1; color: var(--black); }
     .stat-card.featured .stat-val { color: var(--white); }
     .stat-desc { font-size: 14px; color: var(--gray-500); margin-top: 4px; }
     .stat-card.featured .stat-desc { color: rgba(255,255,255,0.8); }
-    .stat-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-    .stat-row .stat-val { font-size: 44px; }
-    .pill-card { background: var(--gray-50); border: 1px solid var(--gray-100); border-radius: var(--radius); padding: 1rem 1.25rem; }
-    .pill-label { font-size: 12px; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; }
-    .pills { display: flex; flex-wrap: wrap; gap: 6px; }
-    .pill {
-      font-size: 13px; font-weight: 400; padding: 4px 12px;
-      border: 1px solid var(--gray-200); border-radius: 100px;
-      color: var(--gray-700); background: var(--white);
-    }
 
     /* ─── SECTION BASE ─── */
     .section { max-width: var(--max); margin: 0 auto; padding: 5rem 2.5rem; }
@@ -232,8 +225,7 @@
       .sh { font-size: 30px; }
       .bio-h { font-size: 28px; }
       .cta-h { font-size: 30px; }
-      .pilares, .svc-grid, .casos-grid { grid-template-columns: 1fr; }
-      .stat-row { grid-template-columns: 1fr 1fr; }
+      .pilares, .svc-grid, .casos-grid, .stats-bar { grid-template-columns: 1fr; }
       .cta-inner { grid-template-columns: 1fr; padding: 3rem 1.5rem; }
       .cta-actions { align-items: flex-start; }
       .nav-links { display: none; }
@@ -276,25 +268,29 @@
           <a href="#servicios" class="btn-outline">Ver servicios</a>
         </div>
       </div>
-      <div class="hero-right">
-        <div class="stat-card featured">
-          <div class="stat-label">Tiempo recuperado</div>
-          <div class="stat-val">8 - 12 h</div>
-          <div class="stat-desc">en burocracia y documentación repetitiva</div>
-        </div>
-        <div class="stat-row">
-          <div class="stat-card">
-            <div class="stat-label">Experiencia</div>
-            <div class="stat-val">18+</div>
-            <div class="stat-desc">años de gestión</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-label">Organizaciones</div>
-            <div class="stat-val">+30</div>
-            <div class="stat-desc">acompañadas</div>
-          </div>
-        </div>
+      <div class="hero-image-wrapper">
+        <img src="hero-image.jpg" alt="Consultoría Estratégica" class="hero-image">
+      </div>
+    </div>
+  </div>
 
+  <!-- STATS BAR -->
+  <div class="stats-bar-wrap">
+    <div class="stats-bar">
+      <div class="stat-card featured">
+        <div class="stat-label">Tiempo recuperado</div>
+        <div class="stat-val">8 - 12 h</div>
+        <div class="stat-desc">en burocracia y documentación repetitiva</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Experiencia</div>
+        <div class="stat-val">18+</div>
+        <div class="stat-desc">años de gestión</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Organizaciones</div>
+        <div class="stat-val">+30</div>
+        <div class="stat-desc">acompañadas</div>
       </div>
     </div>
   </div>
